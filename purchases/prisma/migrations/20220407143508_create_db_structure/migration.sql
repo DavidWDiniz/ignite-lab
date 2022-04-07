@@ -8,7 +8,6 @@ ADD COLUMN     "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP;
 -- CreateTable
 CREATE TABLE "Product" (
     "id" TEXT NOT NULL,
-    "status" "PurchaseStatus" NOT NULL DEFAULT E'PENDING',
     "title" TEXT NOT NULL,
     "slug" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -20,6 +19,7 @@ CREATE TABLE "Product" (
 -- CreateTable
 CREATE TABLE "Purchase" (
     "id" TEXT NOT NULL,
+    "status" "PurchaseStatus" NOT NULL DEFAULT E'PENDING',
     "customerId" TEXT NOT NULL,
     "productId" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
